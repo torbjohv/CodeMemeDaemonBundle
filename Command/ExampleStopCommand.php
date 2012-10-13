@@ -1,5 +1,6 @@
 <?php
 
+/*
 namespace CodeMeme\Bundle\CodeMemeDaemonBundle\Command;
 
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,9 +13,9 @@ use CodeMeme\Bundle\CodeMemeDaemonBundle\Daemon;
 
 class ExampleStopCommand extends ContainerAwareCommand
 {
-    
+
     protected function configure()
-    {   
+    {
         $this->setName('example:stop')
              ->setDescription('Stops the example daemon')
              ->setHelp(<<<EOT
@@ -29,4 +30,4 @@ EOT
         $daemon->stop();
     }
 
-}
+} */

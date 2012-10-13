@@ -1,5 +1,5 @@
 <?php
-
+/*
 namespace CodeMeme\Bundle\CodeMemeDaemonBundle\Command;
 
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,9 +12,9 @@ use CodeMeme\Bundle\CodeMemeDaemonBundle\Daemon;
 
 class ExampleRestartCommand extends ContainerAwareCommand
 {
-    
+
     protected function configure()
-    {   
+    {
         $this->setName('example:restart')
              ->setDescription('restarts the example daemon')
              ->setHelp(<<<EOT
@@ -28,12 +28,13 @@ EOT
         $daemon = new Daemon($this->getContainer()->getParameter('example.daemon.options'));
 
         $daemon->reStart();
-        
+
         while ($daemon->isRunning()) {
             $this->getContainer()->get('example.control')->run();
         }
-        
+
         $daemon->stop();
     }
 
 }
+*/

@@ -1,5 +1,6 @@
 <?php
 
+/*
 namespace CodeMeme\Bundle\CodeMemeDaemonBundle\Command;
 
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,9 +13,9 @@ use CodeMeme\Bundle\CodeMemeDaemonBundle\Daemon;
 
 class ExampleStartCommand extends ContainerAwareCommand
 {
-    
+
     protected function configure()
-    {   
+    {
         $this->setName('example:start')
              ->setDescription('Starts the example daemon')
              ->setHelp(<<<EOT
@@ -27,12 +28,12 @@ EOT
     {
         $daemon = new Daemon($this->getContainer()->getParameter('example.daemon.options'));
         $daemon->start();
-        
+
         while ($daemon->isRunning()) {
             $this->getContainer()->get('example.control')->run();
         }
-        
+
         $daemon->stop();
     }
 
-}
+} */
